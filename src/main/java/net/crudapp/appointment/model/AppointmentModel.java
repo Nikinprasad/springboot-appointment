@@ -25,16 +25,46 @@ public class AppointmentModel {
 
 	@Column(name = "datetime")
 	private Date datetime;
+	
+	@Column(name = "user_id")
+	private long user_id;
+	
+	@Column(name = "fileB")
+	private byte[] file;
+	
+	@Column(name = "fileName")
+	private String filename;
+
 
 	public AppointmentModel() {
 		super();
 	}
 
-	public AppointmentModel(String title, String description, Date datetime) {
+	public AppointmentModel(String title, String description, Date datetime, Long user_id, byte[] file, String filename) {
 		super();
 		this.title = title;
 		this.description = description;
 		this.datetime = datetime;
+		this.user_id = user_id;
+		this.file = file;
+		this.filename = filename;
+	}
+
+	public byte[] getFile() {
+		return file;
+	}
+
+	public void setFile(byte[] file) {
+		this.file = file;
+	}
+
+	
+	public long getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(long user_id) {
+		this.user_id = user_id;
 	}
 
 	public long getId() {
@@ -69,4 +99,12 @@ public class AppointmentModel {
 		this.datetime = datetime;
 	}
 
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
+	
 }

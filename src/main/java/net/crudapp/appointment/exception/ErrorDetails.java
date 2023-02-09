@@ -8,7 +8,7 @@ public class ErrorDetails {
 	private String message;
 	private String details;
 
-	public ErrorDetails(java.util.Date date, String message, String details) {
+	public ErrorDetails(Date date, String message, String details) {
 		super();
 		this.timestamp = (Date) date;
 		this.message = message;
